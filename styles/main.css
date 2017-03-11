@@ -1,7 +1,7 @@
-*, *::before, *::after {
-    -mox-box-sozing: border-box;
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-sizing: border box;
+    box-sizing: border-box;
 } 
 
 html {
@@ -17,7 +17,7 @@ body {
  
 .navbar {
     position: relative;
-    padding: 0.5 rem;
+    padding: 0.5rem;
     background-color: rgba(101,18,95,0.5); /* #2 */
     z-index: 1;
 }
@@ -67,10 +67,27 @@ body {
     background-color: white;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
 /* Medium and small screens (640px) (google Media */
 @media (min-width: 640px) {
     html { font-size: 112%; }
-    /* Style information will go here */
+    
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+     
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }  
 }
  
 /* Large screens (1024px) */

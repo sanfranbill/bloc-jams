@@ -16,7 +16,6 @@
      top: 40%;                       /* positioning will be explained in a resource */
      -webkit-transform: translateY(-50%);
      -moz-transform: translateY(-50%);
-     -ms-transform: translateY(-50%);
      transform: translateY(-50%);
      width: 100%;                    /* makes sure the title inhabits the full width of its container */
      text-align: center;             /* aligns text in the horizontal center of the element */
@@ -29,7 +28,7 @@
  
  .selling-points {
      position: relative;
- }
+}
  
  .point {
      position: relative;

@@ -78,7 +78,7 @@ var setCurrentAlbum = function(album) {
     }
 };
 
-windown.onload = function() {
+window.onload = function() {
     setCurrentAlbum(albumPicasso);
     
     var albums = [albumPicasso, albumMarconi, albumMartin];

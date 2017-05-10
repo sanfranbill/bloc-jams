@@ -104,13 +104,4 @@ window.onload = function() {
         });
     }
     
-    var albums = [albumPicasso, albumMarconi, albumMartin];
-//    var index = 1;
-//    albumImage.addEventListener("click", function(event) {
-//        setCurrentAlbum(albums[index]);
-//        index++;
-//        if (index == albums.length) {
-//            index = 0;
-//        }
-//    });
 };

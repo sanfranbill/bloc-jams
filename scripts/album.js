@@ -54,7 +54,6 @@ var createSongRow = function(songNumber, songName, songLength) {
     return template;
 };
 
-
 var setCurrentAlbum = function(album) {
     
     // #1 - select elements that we want to populate with text dynamically
@@ -63,7 +62,6 @@ var setCurrentAlbum = function(album) {
     var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
     var albumImage = document.getElementsByClassName('album-cover-art')[0];
     var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
-
     
     // #2 - assign values to each part of the album (text, images)
     albumTitle.firstChild.nodeValue = album.title;
@@ -104,13 +102,4 @@ window.onload = function() {
         });
     }
     
-    var albums = [albumPicasso, albumMarconi, albumMartin];
-//    var index = 1;
-//    albumImage.addEventListener("click", function(event) {
-//        setCurrentAlbum(albums[index]);
-//        index++;
-//        if (index == albums.length) {
-//            index = 0;
-//        }
-//    });  
 };

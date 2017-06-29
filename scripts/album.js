@@ -91,7 +91,7 @@ var createSongRow = function(songNumber, songName, songLength) {
     // assign values to each part of the album (text, images)
     $albumTitle.text(album.title);
     $albumArtist.text(album.artist);
-    $albumReleaseInfo.text(album.year + '' + album.label);
+    $albumReleaseInfo.text(album.year + ' ' + album.label);
     $albumImage.attr('src', album.albumArtUrl);
     
     // clear contents of the album song list container
@@ -102,7 +102,6 @@ var createSongRow = function(songNumber, songName, songLength) {
         var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
         $albumSongList.append($newRow);
     }
-};
 
 // Album button templates
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
@@ -113,4 +112,4 @@ var currentlyPlayingSong = null;
 
 $(document).ready(function() {
     setCurrentAlbum(albumPicasso);
-};
+});

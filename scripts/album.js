@@ -81,6 +81,7 @@ var createSongRow = function(songNumber, songName, songLength) {
     return $row;
 };
     
+var setCurrentAlbum = function(album) {
     // select elements that we want to populate with text dynamically
     var $albumTitle = $('.album-view-title');
     var $albumArtist = $('.album-view-artist');
@@ -102,6 +103,7 @@ var createSongRow = function(songNumber, songName, songLength) {
         var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
         $albumSongList.append($newRow);
     }
+}
 
 // Album button templates
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';

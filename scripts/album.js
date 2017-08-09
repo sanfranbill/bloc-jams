@@ -1,3 +1,12 @@
+var setSong = function(songNumber) {
+    currentlyPlayingSongNumber = parseInt(songNumber);
+    currentSongFromAlbum = currentAlbum.songs[songNumber - 1];   
+};
+
+var getSongNumberCell = function(number) {
+    return $('.song-item-number[data-song-number="' + number + '"]');
+}
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template = 
       ' <tr class="album-view-song-item">'
@@ -13,13 +22,13 @@ var createSongRow = function(songNumber, songName, songLength) {
         
         if (currentlyPlayingSongNumber !== null) {
             // revert to song number for currently playing song because user started playing new song
-            var currentlyPlayingCell = $('.song-item-number[data-song-number="' + currentlyPlayingSongNumber + '"]');
+            var currentlyPlayingCell = getSongNumberCell(currentlyPlayingSongNumber);
             currentlyPlayingCell.html(currentlyPlayingSongNumber);
         }
         if (currentlyPlayingSongNumber !== songNumber) {
             // switch from play  --> pause button to indicate new song is playing
             $(this).html(pauseButtonTemplate);
-            currentlyPlayingSongNumber = songNumber;
+            setSong(songNumber);
             currentSongFromAlbum = currentAlbum.songs[songNumber - 1];
             updatePlayerBarSong();
         } else if (currentlyPlayingSongNumber === songNumber) {
@@ -56,8 +65,6 @@ var createSongRow = function(songNumber, songName, songLength) {
     return $row;
 };
 
-console.log('so far so good');
-
 var setCurrentAlbum = function(album) {
     currentAlbum = album;
     // select elements that we want to populate with text dynamically
@@ -83,13 +90,9 @@ var setCurrentAlbum = function(album) {
     }
 };
 
-console.log('so far so good-2');
-
 var trackIndex = function(album, song) {
     return album.songs.indexOf(song);
 };
-
-console.log('so far so good-3');
 
 var nextSong = function() {
     var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);

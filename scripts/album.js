@@ -138,7 +138,6 @@ var previousSong = function() {
         currentSongIndex = currentAlbum.songs.length - 1;        
     }
     
-    // Save the last song number before changing it
     var lastSongNumber = currentlyPlayingSongNumber;
 
     // Set a new current song

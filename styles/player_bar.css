@@ -140,6 +140,12 @@
     text-align: right;
 }
 
+.player-bar .volume .icon {
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .player-bar .volume .seek-bar {
     display: inline-block;
     width: 5.75rem;
